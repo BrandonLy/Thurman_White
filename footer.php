@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			
+
 		</div><!-- .site-info -->
 		<div id="footer-wrap">
 			<div class="info">
@@ -28,9 +28,9 @@
 			</div>
 			<div class="info">
 				<h1>PHONE NUMBER</h1>
-				<p>7:30 AM - 3:30 PM</p>
+				<p><a href="tel:+17027990777"/>(702) 799-0777</a></p>
 				<h1>FAX NUMBER</h1>
-				<p>8:00 AM - 11:00 AM</p>
+				<p><a href="tel:+17027997690"/>(702) 799-7690</a></p>
 				<h1>1661 GALLERIA DRIVE  HENDERSON,</h1>
 				<h1>NV 89014</h1>
 			</div>

@@ -121,11 +121,27 @@ function thurman_white_scripts() {
 
 	wp_enqueue_script( 'thurman_white-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	wp_enqueue_script( 'jQuery', 'https://code.jquery.com/jquery-1.12.0.min.js"', array(), '', true );
+
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jQuery'), '', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'thurman_white_scripts' );
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 25;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+// sort the teachers by their last name
+function posts_orderby_lastname ($orderby_statement)
+{
+  $orderby_statement = "RIGHT(post_title, LOCATE(' ', REVERSE(post_title)) - 1) ASC";
+    return $orderby_statement;
+}
 
 /**
  * Implement categories into custom post types

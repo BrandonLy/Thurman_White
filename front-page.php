@@ -23,30 +23,38 @@ get_header(); ?>
 		<div id="boxes-wrap">
 			<div class="box">
 				<div class="text-wrap">
-					<h4>WHO ARE WE...?</h4>
-					<p>Cupcake ipsum dolor sit amet chupa chups cookie pastry marshmallow. Chupa chups macaroon cake. Toffee halvah toffee sesame snaps...</p>
-					<a href="#">Read More</a>
+				<?php query_posts('p=286');
+					while (have_posts()): the_post(); ?>
+					<h4 id="who-header"><?php echo get_the_title(); ?></h4>
+					<p><?php echo get_the_excerpt(); ?></p>
+					<div id="who-content" class="hidden-info"><?php echo get_the_content(); ?></div>
+					<a id="who" href="javascript:void(0)">Read More</a>
+				<?php endwhile; ?>
 				</div>
 			</div>
 			<div class="box">
 				<div class="text-wrap">
-					<h4>DEAN'S DIALOUGE...</h4>
-					<p>Cupcake ipsum dolor sit amet chupa chups cookie pastry marshmallow. Chupa chups macaroon cake. Toffee halvah toffee sesame snaps...</p>
-					<a href="#">Read More</a>
+				<?php query_posts('p=284');
+					while (have_posts()): the_post(); ?>
+					<h4 id="deans-header"><?php echo get_the_title(); ?></h4>
+					<p><?php echo get_the_excerpt(); ?></p>
+					<div id="deans-content" class="hidden-info"><?php echo get_the_content(); ?></div>
+					<a id="dean" href="javascript:void(0)">Read More</a>
+				<?php endwhile; ?>
 				</div>
 			</div>
 			<div class="box">
 				<div class="text-wrap">
 					<h4>ANNOUNCEMENTS...</h4>
-					<p>Cupcake ipsum dolor sit amet chupa chups cookie pastry marshmallow. Chupa chups macaroon cake. Toffee halvah toffee sesame snaps...</p>
-					<a href="#">Read More</a>
+					<p>Click read more to find out what's happening in your school. This is where the faculty members at Thurman White MS will put out important information or just general news.</p>
+					<a href="<?php echo get_site_url(); ?>/announcements/">Read More</a>
 				</div>
 			</div>
 			<div class="box">
 				<div class="text-wrap">
 					<h4>OTHER EVENTS...</h4>
-					<p>Cupcake ipsum dolor sit amet chupa chups cookie pastry marshmallow. Chupa chups macaroon cake. Toffee halvah toffee sesame snaps...</p>
-					<a href="#">Read More</a>
+					<p>Want to know when that basketball game is happening and who it's against? Want to know when and where the book fair is? Click read more to find out!</p>
+					<a href="<?php echo get_site_url(); ?>/events/">Read More</a>
 				</div>
 			</div>
 		</div>
@@ -54,7 +62,10 @@ get_header(); ?>
 		<div id="pt1">
 			<h1>WHO ARE WE...?</h1>
 			<hr noshade>
-			<p>Cupcake ipsum dolor sit amet chupa chups cookie pastry marshmallow. Chupa chups macaroon cake powder topping gummies gingerbread cake apple pie. Toffee halvah toffee sesame snaps. Cupcake ipsum dolor sit amet chupa chups cookie pastry marshmallow. Chupa chups macaroon cake powder topping gummies gingerbread cake apple pie. Toffee halvah toffee sesame snaps.</p>
+			<?php query_posts('p=286');
+				while (have_posts()): the_post(); ?>
+					<div><?php echo get_the_content(); ?></div>
+				<?php endwhile; ?>
 			<hr noshade=>
 		</div>
 
@@ -76,17 +87,19 @@ get_header(); ?>
 		<div id="pt2">
 			<h1>SIGN ME UP</h1>
 			<hr noshade>
-			<p>Cupcake ipsum dolor sit amet chupa chups cookie pastry marshmallow. Chupa chups macaroon cake powder topping gummies gingerbread cake apple pie. Toffee halvah toffee sesame snaps. Cupcake ipsum dolor sit amet chupa chups cookie pastry marshmallow. Chupa chups macaroon cake powder topping gummies gingerbread cake apple pie. Toffee halvah toffee sesame snaps.</p>
+			<p>Linked below you'll find the registration form for incoming 6th grader looking to enroll in the magnet program here at Thurman White MS.</p>
+			<p>Additionally, you'll find the magnet course catalog that outlines the different program areas offered at Thurman White. For each program area you'll find a breakdown of each level that describes what will be covered in the course.</p>
+			<p>Finally, you'll find the normal course catalog. This PDF is the most comprehensive and covers a few things. Here you will find the different core classes offered at Thurman White and what each class places a focus on. After the core classes, the electives offered are explained with their duration listed. Not only are there core classes and electives, but there is also the opportunity for students to enroll in the international study program, which is explained in the course catalog. The final two things covered are the different diplomas and the honor code.</p>
+			<p>Need more information? Feel free to call <a href="tel:+17027990777"/>(702) 799-0777</a></p>
 			<hr noshade=>
 		</div>
 
 		<div id="pt3">
 			<div id="h1-wrap">
-				<h1>REGISTRATION FORM</h1>
-				<h1>MAGNET COURSE CATALOG</h1>
-				<h1>COURSE CATALOG</h1>
+				<a href="<?php echo get_site_url(); ?>/wp-content/uploads/2016/02/registration-form.docx"><h1>REGISTRATION FORM</h1></a>
+				<a href="<?php echo get_site_url(); ?>/wp-content/uploads/2016/02/magnet-course-catalog.pdf"><h1>MAGNET COURSE CATALOG</h1></a>
+				<a href="<?php echo get_site_url(); ?>/wp-content/uploads/2016/02/course-catalog.pdf"><h1>COURSE CATALOG</h1></a>
 			</div>
-			<p>Cupcake ipsum dolor sit amet chupa chups cookie pastry marshmallow. Chupa chups macaroon cake powder topping gummies gingerbread cake apple pie. Toffee halvah toffee sesame snaps. Cupcake ipsum dolor sit amet chupa chups cookie pastry marshmallow. Chupa chups macaroon cake powder topping gummies gingerbread cake apple pie. Toffee halvah toffee sesame snaps.</p>
 		</div>
 
 		</main><!-- #main -->
