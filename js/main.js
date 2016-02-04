@@ -80,7 +80,7 @@ jQuery(document).ready(function( $ ) {
         // for loop that runs once for every teacher on the page
         for (d = 0; d < $teachers.length; d++) {
             // for loop that runs once for every teacher in the $davis array
-            for (f = 0; f < $teachers.length; f++) {
+            for (f = 0; f < $davis.length; f++) {
                 // if the teacher at index d has the same last name as the teacher at index f show the teacher
                 if ($($('.faculty-member').get(d)).children('.circle').children('.teacher-name').text().split(" ")[1] == $davis[f]) {
                     $($('.faculty-member').get(d)).show();
@@ -96,7 +96,7 @@ jQuery(document).ready(function( $ ) {
         // for loop that runs once for every teacher on the page
         for (p = 0; p < $teachers.length; p++) {
             // for loop that runs once for every teacher in the $hemme array
-            for (k = 0; k < $.length; k++) {
+            for (k = 0; k < $hemme.length; k++) {
                 // if the teacher at index p has the same last name as the teacher at index f show the teacher
                 if ($($('.faculty-member').get(p)).children('.circle').children('.teacher-name').text().split(" ")[1] == $hemme[k]) {
                     $($('.faculty-member').get(p)).show();
@@ -112,7 +112,7 @@ jQuery(document).ready(function( $ ) {
         // for loop that runs once for every teacher on the page
         for (r = 0; r < $teachers.length; r++) {
             // for loop that runs once for every teacher in the $pelusio array
-            for (w = 0; w < $.length; w++) {
+            for (w = 0; w < $pelusio.length; w++) {
                 // if the teacher at index r has the same last name as the teacher at index k show the teacher
                 if ($($('.faculty-member').get(r)).children('.circle').children('.teacher-name').text().split(" ")[1] == $pelusio[w]) {
                     $($('.faculty-member').get(r)).show();
